@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C2FAD4E212EA98B00A39CEB /* Verbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2FAD4D212EA98B00A39CEB /* Verbs.swift */; };
 		5C4C9014212B1DB2000DC4B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C9013212B1DB2000DC4B7 /* AppDelegate.swift */; };
 		5C4C9016212B1DB2000DC4B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C9015212B1DB2000DC4B7 /* ViewController.swift */; };
 		5C4C9019212B1DB2000DC4B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C4C9017212B1DB2000DC4B7 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C2FAD4D212EA98B00A39CEB /* Verbs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verbs.swift; sourceTree = "<group>"; };
 		5C4C9010212B1DB2000DC4B7 /* Core English.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Core English.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C4C9013212B1DB2000DC4B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C4C9015212B1DB2000DC4B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,9 +39,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C2FAD4C212EA96A00A39CEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C2FAD4D212EA98B00A39CEB /* Verbs.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5C4C9007212B1DB2000DC4B7 = {
 			isa = PBXGroup;
 			children = (
+				5C2FAD4C212EA96A00A39CEB /* Model */,
 				5C4C9025212B1EC3000DC4B7 /* .gitignore */,
 				5C4C9012212B1DB2000DC4B7 /* Core English */,
 				5C4C9011212B1DB2000DC4B7 /* Products */,
@@ -139,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2FAD4E212EA98B00A39CEB /* Verbs.swift in Sources */,
 				5C4C9016212B1DB2000DC4B7 /* ViewController.swift in Sources */,
 				5C4C9014212B1DB2000DC4B7 /* AppDelegate.swift in Sources */,
 			);

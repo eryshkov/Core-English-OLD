@@ -12,7 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let a = Verbs.vocab.find(word: "can")
+        if let res = a {
+            print(res.present.en,res.present.rus)
+        }else{
+            print("not found")
+        }
     }
 
     override func didReceiveMemoryWarning() {
