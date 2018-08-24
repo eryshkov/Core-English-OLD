@@ -1,12 +1,12 @@
 //
-//  Pronoun.swift
+//  Name.swift
 //  Core English
 //
 //  Created by Evgeniy Ryshkov on 24.08.2018.
 //  Copyright © 2018 Evgeniy Ryshkov. All rights reserved.
 //
 
-class Pronoun:Word {//Местоимение
+class Name:Word {
     var isSingular:Bool // Единственное число
     
     init(singularName name: String, translation: String...) {
