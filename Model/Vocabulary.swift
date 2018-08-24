@@ -7,7 +7,12 @@
 //
 
 class Vocabulary {
-    static var words: Set<Word> = [
+    static var context = Vocabulary()
+    
+    var words: Set<Word>
+    
+    private init () {
+        self.words = [
         Verb(nameStrong: "can", translation: "могу"),
         Verb(nameStrong: "may", translation: "можно"),
         Verb(nameStrong: "must", translation: "должен"),
@@ -15,7 +20,12 @@ class Vocabulary {
         Verb(nameStrong: "sould", translation: "стоит", "следует"),
         Verb(nameStrong: "would", translation: "бы")
         
-    ]
+        ]
+    }
     
-    private init () {}
+    func search(word: String) -> Word? {
+        return self.words.first { (vocabWord:Word) -> Bool in
+            return vocabWord == Word(name: word, translation: "")
+        }
+    }
 }

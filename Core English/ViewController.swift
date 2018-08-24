@@ -13,7 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        let word = Vocabulary.context.search(word: "can")
+        if let theWord = word {
+            print(theWord.name, theWord.translation)
+        }else{
+            print("Not found")
+        }
     }
 
     override func didReceiveMemoryWarning() {
