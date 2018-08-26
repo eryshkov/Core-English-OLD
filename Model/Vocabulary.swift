@@ -30,10 +30,21 @@ class Vocabulary {
         }
     }
     
-    func addVerb_V1(verbName name: String, isRegular: Bool, isStrong: Bool, translation: String...) -> Bool {
+    func addVerb(verbName name: String, isRegular: Bool, isStrong: Bool, translation: String...) -> Bool {
         guard let searchedWord = search(word: name), let _ = searchedWord as? Verb else { return false }
         
         let newVerb = Verb(name: name, translation: translation, isRegular: isRegular, isStrong: isStrong)
+        
+        self.words.insert(newVerb)
+        
+        return true
+    }
+    
+    func addVerb(v2VerbName name: String, isRegular: Bool, isStrong: Bool, v1VerbName: String? = nil, translation: String...) -> Bool {
+        guard let searchedWord = search(word: name), let _ = searchedWord as? Verb else { return false }
+        
+        let newVerb = Verb(name: name, translation: translation, isRegular: isRegular, isStrong: isStrong)
+        //TODO: - подумать над связями глаголов между собой по временам
         
         self.words.insert(newVerb)
         

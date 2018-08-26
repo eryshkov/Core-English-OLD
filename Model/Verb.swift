@@ -9,11 +9,13 @@
 class Verb:Word {
     var isRegular: Bool //Правильный глагол
     var isStrong: Bool //Сильный глагол
+    var present: Verb?
     var future: Verb?
     var pastV2: Verb?
     var V3: Verb?
     
-    init(name: String, translation: [String], future: Verb? = nil, pastV2: Verb? = nil, V3: Verb? = nil, isRegular: Bool, isStrong: Bool) {
+    init(name: String, translation: [String], present: Verb? = nil, future: Verb? = nil, pastV2: Verb? = nil, V3: Verb? = nil, isRegular: Bool, isStrong: Bool) {
+        self.present = present
         self.future = future
         self.pastV2 = pastV2
         self.V3 = V3
