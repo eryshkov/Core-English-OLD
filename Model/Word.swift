@@ -6,7 +6,7 @@
 //  Copyright © 2018 Evgeniy Ryshkov. All rights reserved.
 //
 
-class Word:Hashable {
+class Word {
     var name: String
     var translation: [String]
     
@@ -19,6 +19,9 @@ class Word:Hashable {
         self.init(name: name, translation: translation)
     }
     
+}
+
+extension Word:Hashable {
     var hashValue: Int {
         return self.name.hashValue
     }
@@ -27,5 +30,3 @@ class Word:Hashable {
         return lhs.hashValue == rhs.hashValue
     }
 }
-
-
