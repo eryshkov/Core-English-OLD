@@ -10,14 +10,13 @@ class Word:Hashable {
     var name: String
     var translation: [String]
     
-    init(name: String, translation: String...) {
+    init(name: String, translation: [String]) {
         self.name = name
         self.translation = translation
     }
     
-    init(name: String, translation: [String]) {
-        self.name = name
-        self.translation = translation
+    convenience init(name: String, translation: String...) {
+        self.init(name: name, translation: translation)
     }
     
     var hashValue: Int {

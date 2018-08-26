@@ -13,30 +13,25 @@ class Verb:Word {
     var pastV2: [String]
     var V3: [String]
     
-    init(nameStrong name: String, translation: String...) {
-        self.isRegular = false
-        self.future = [String]()
-        self.pastV2 = [String]()
-        self.V3 = [String]()
-        self.isStrong = true
+    init(name: String, translation: [String], future: [String], pastV2: [String], V3: [String], isRegular: Bool, isStrong: Bool) {
+        self.future = future
+        self.pastV2 = pastV2
+        self.V3 = V3
+        self.isRegular = isRegular
+        self.isStrong = isStrong
         super.init(name: name, translation: translation)
     }
     
-    init(nameRegular name: String, translation: String...) {
-        self.isRegular = true
-        self.future = [String]()
-        self.pastV2 = [String]()
-        self.V3 = [String]()
-        self.isStrong = false
-        super.init(name: name, translation: translation)
+    convenience init(nameStrong name: String, translation: String...) {
+        self.init(name: name, translation: translation, future: [String](), pastV2: [String](), V3: [String](), isRegular: false, isStrong: true)
+        
     }
     
-    init(nameIrregular name: String, translation: String...) {
-        self.isRegular = false
-        self.future = [String]()
-        self.pastV2 = [String]()
-        self.V3 = [String]()
-        self.isStrong = false
-        super.init(name: name, translation: translation)
+    convenience init(nameRegular name: String, translation: String...) {
+        self.init(name: name, translation: translation, future: [String](), pastV2: [String](), V3: [String](), isRegular: true, isStrong: false)
+    }
+    
+    convenience init(nameIrregular name: String, translation: String...) {
+        self.init(name: name, translation: translation, future: [String](), pastV2: [String](), V3: [String](), isRegular: false, isStrong: false)
     }
 }
