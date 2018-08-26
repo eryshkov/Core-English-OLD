@@ -9,11 +9,11 @@
 class Verb:Word {
     var isRegular: Bool //Правильный глагол
     var isStrong: Bool //Сильный глагол
-    var future: [String]
-    var pastV2: [String]
-    var V3: [String]
+    var future: Verb?
+    var pastV2: Verb?
+    var V3: Verb?
     
-    init(name: String, translation: [String], future: [String], pastV2: [String], V3: [String], isRegular: Bool, isStrong: Bool) {
+    init(name: String, translation: [String], future: Verb? = nil, pastV2: Verb? = nil, V3: Verb? = nil, isRegular: Bool, isStrong: Bool) {
         self.future = future
         self.pastV2 = pastV2
         self.V3 = V3
@@ -23,15 +23,14 @@ class Verb:Word {
     }
     
     convenience init(nameStrong name: String, translation: String...) {
-        self.init(name: name, translation: translation, future: [String](), pastV2: [String](), V3: [String](), isRegular: false, isStrong: true)
-        
+        self.init(name: name, translation: translation, isRegular: false, isStrong: true)
     }
     
     convenience init(nameRegular name: String, translation: String...) {
-        self.init(name: name, translation: translation, future: [String](), pastV2: [String](), V3: [String](), isRegular: true, isStrong: false)
+        self.init(name: name, translation: translation, isRegular: true, isStrong: false)
     }
     
     convenience init(nameIrregular name: String, translation: String...) {
-        self.init(name: name, translation: translation, future: [String](), pastV2: [String](), V3: [String](), isRegular: false, isStrong: false)
+        self.init(name: name, translation: translation, isRegular: false, isStrong: false)
     }
 }

@@ -21,6 +21,7 @@ class Word {
     
 }
 
+//MARK: - Word:Hashable
 extension Word:Hashable {
     var hashValue: Int {
         return self.name.hashValue

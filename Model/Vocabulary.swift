@@ -23,9 +23,20 @@ class Vocabulary {
         ]
     }
     
+//MARK: - CRUD
     func search(word: String) -> Word? {
         return self.words.first { (vocabWord:Word) -> Bool in
             return vocabWord == Word(name: word, translation: "")
         }
+    }
+    
+    func addVerb_V1(verbName name: String, isRegular: Bool, isStrong: Bool, translation: String...) -> Bool {
+        guard let searchedWord = search(word: name), let _ = searchedWord as? Verb else { return false }
+        
+        let newVerb = Verb(name: name, translation: translation, isRegular: isRegular, isStrong: isStrong)
+        
+        self.words.insert(newVerb)
+        
+        return true
     }
 }
