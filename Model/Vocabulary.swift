@@ -13,12 +13,16 @@ class Vocabulary {
     
     private init () {
         self.words = [
-        Verb(nameStrong: "can", translation: "могу"),
-        Verb(nameStrong: "may", translation: "можно"),
-        Verb(nameStrong: "must", translation: "должен"),
-        Verb(nameStrong: "will", translation: "буду"),
-        Verb(nameStrong: "sould", translation: "стоит", "следует"),
-        Verb(nameStrong: "would", translation: "бы")
+        Verb(v1Strong: "can", translation: "могу"),
+        Verb(v1Strong: "may", translation: "можно"),
+        Verb(v1Strong: "must", translation: "должен"),
+        Verb(v1Strong: "will", translation: "буду"),
+        Verb(v1Strong: "sould", translation: "стоит", "следует"),
+        Verb(v1Strong: "would", translation: "бы"),
+        
+        Verb(v1ToBe: "am", translation: "является"),
+        Verb(v1ToBe: "is", translation: "являюсь"),
+        Verb(v1ToBe: "are", translation: "являются"),
         
         ]
     }
@@ -33,18 +37,21 @@ class Vocabulary {
     func addVerb(verbName name: String, isRegular: Bool, isStrong: Bool, translation: String...) -> Bool {
         guard let searchedWord = search(word: name), let _ = searchedWord as? Verb else { return false }
         
-        let newVerb = Verb(name: name, translation: translation, isRegular: isRegular, isStrong: isStrong)
+        let newVerb = Verb(name: name, translation: translation, isRegular: isRegular, isStrong: isStrong, isToBe: false)
         
         self.words.insert(newVerb)
         
         return true
     }
     
-    func addVerb(v2VerbName name: String, isRegular: Bool, isStrong: Bool, v1VerbName: String? = nil, translation: String...) -> Bool {
+    func addVerb(v2VerbName name: String, isRegular: Bool, isStrong: Bool, v1Name verbNameLink: String? = nil, translation: String...) -> Bool {
         guard let searchedWord = search(word: name), let _ = searchedWord as? Verb else { return false }
         
-        let newVerb = Verb(name: name, translation: translation, isRegular: isRegular, isStrong: isStrong)
-        //TODO: - подумать над связями глаголов между собой по временам
+        let newVerb = Verb(name: name, translation: translation, isRegular: isRegular, isStrong: isStrong, isToBe: false)
+        
+        if let v1VerbName = verbNameLink, let v1Verb = search(word: v1VerbName) as? Verb {
+            newVerb.present = v1Verb
+        }
         
         self.words.insert(newVerb)
         

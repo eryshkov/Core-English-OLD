@@ -13,6 +13,7 @@
 		5C4C901B212B1DB4000DC4B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C4C901A212B1DB4000DC4B7 /* Assets.xcassets */; };
 		5C4C901E212B1DB4000DC4B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C4C901C212B1DB4000DC4B7 /* LaunchScreen.storyboard */; };
 		5C4C9026212B1EC3000DC4B7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5C4C9025212B1EC3000DC4B7 /* .gitignore */; };
+		5CD69F9F21353D6800F5F142 /* FillVocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD69F9E21353D6800F5F142 /* FillVocabulary.swift */; };
 		5CFB1D3B21308A39004AB68D /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB1D3A21308A39004AB68D /* Word.swift */; };
 		5CFB1D3D21309229004AB68D /* Sentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB1D3C21309229004AB68D /* Sentence.swift */; };
 		5CFB1D3F21309265004AB68D /* Verb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB1D3E21309265004AB68D /* Verb.swift */; };
@@ -30,6 +31,7 @@
 		5C4C901D212B1DB4000DC4B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C4C901F212B1DB4000DC4B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C4C9025212B1EC3000DC4B7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5CD69F9E21353D6800F5F142 /* FillVocabulary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillVocabulary.swift; sourceTree = "<group>"; };
 		5CFB1D3A21308A39004AB68D /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		5CFB1D3C21309229004AB68D /* Sentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentence.swift; sourceTree = "<group>"; };
 		5CFB1D3E21309265004AB68D /* Verb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verb.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				5CFB1D3E21309265004AB68D /* Verb.swift */,
 				5CFB1D3C21309229004AB68D /* Sentence.swift */,
 				5CFB1D44213092C5004AB68D /* Vocabulary.swift */,
+				5CD69F9E21353D6800F5F142 /* FillVocabulary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				5CFB1D45213092C5004AB68D /* Vocabulary.swift in Sources */,
 				5C4C9016212B1DB2000DC4B7 /* ViewController.swift in Sources */,
 				5CFB1D3D21309229004AB68D /* Sentence.swift in Sources */,
+				5CD69F9F21353D6800F5F142 /* FillVocabulary.swift in Sources */,
 				5CFB1D43213092AD004AB68D /* Name.swift in Sources */,
 				5C4C9014212B1DB2000DC4B7 /* AppDelegate.swift in Sources */,
 			);
