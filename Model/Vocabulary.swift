@@ -9,7 +9,7 @@
 class Vocabulary {
     static var context = Vocabulary()
     
-    var words: Set<Word>
+    var words: [Word]
     
     private init () {
         self.words = [
@@ -60,7 +60,7 @@ class Vocabulary {
             newVerb.present = newVerb
         }
         
-        self.words.insert(newVerb)
+        self.words.append(newVerb)
         
         return newVerb
     }
