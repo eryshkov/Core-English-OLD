@@ -39,9 +39,9 @@ class Vocabulary {
         return unwVerb
     }
     
-    func addVerb(verbName name: String, tense: Tense, linkToV1Verb v1Verb: String? = nil, isRegular: Bool, isStrong: Bool, isToBe: Bool, translation: String...) {
+    func addVerb(verbName name: String, tense: Tense, linkToV1Verb v1Verb: String? = nil, isRegular: Bool, isStrong: Bool, isToBe: Bool, translation: String...) -> Verb? {
         
-        guard search(word: name) == nil else { return }
+        guard search(word: name) == nil else { return nil}
         
         let newVerb = Verb(name: name, translation: translation, isRegular: isRegular, isStrong: isStrong, isToBe: isToBe)
         
@@ -62,6 +62,7 @@ class Vocabulary {
         
         self.words.insert(newVerb)
         
+        return newVerb
     }
     
 }

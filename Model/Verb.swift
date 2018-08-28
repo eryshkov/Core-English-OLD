@@ -30,6 +30,22 @@ class Verb:Word {
         }
     }
     
+    func addLink(toPresent verb: Verb) {
+        self.present = verb
+    }
+    
+    func addLink(toPastV2 verb: Verb) {
+        self.pastV2 = verb
+    }
+    
+    func addLink(toFuture verb: Verb) {
+        self.future = verb
+    }
+    
+    func addLink(toV3 verb: Verb) {
+        self.V3 = verb
+    }
+    
     init(name: String, translation: [String], present: Verb? = nil, future: Verb? = nil, pastV2: Verb? = nil, V3: Verb? = nil, isRegular: Bool, isStrong: Bool, isToBe: Bool) {
         self.isRegular = isRegular
         self.isStrong = isStrong
