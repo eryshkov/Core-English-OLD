@@ -9,23 +9,9 @@
 class Vocabulary {
     static var context = Vocabulary()
     
-    var words: [Word]
+    var words: [Word] = [Word]()
     
-    private init () {
-        self.words = [
-        Verb(v1Strong: "can", translation: "могу"),
-        Verb(v1Strong: "may", translation: "можно"),
-        Verb(v1Strong: "must", translation: "должен"),
-        Verb(v1Strong: "will", translation: "буду"),
-        Verb(v1Strong: "sould", translation: "стоит", "следует"),
-        Verb(v1Strong: "would", translation: "бы"),
-        
-        Verb(v1ToBe: "am", translation: "является"),
-        Verb(v1ToBe: "is", translation: "являюсь"),
-        Verb(v1ToBe: "are", translation: "являются"),
-        
-        ]
-    }
+    private init () {}
     
 //MARK: - CRUD
     func search(word: String) -> Word? {
@@ -39,30 +25,17 @@ class Vocabulary {
         return unwVerb
     }
     
-    func addVerb(verbName name: String, tense: Tense, linkToV1Verb v1Verb: String? = nil, isRegular: Bool, isStrong: Bool, isToBe: Bool, translation: String...) -> Verb? {
+    func addVerb(verbName name: String, tense: Tense, isRegular: Bool, isStrong: Bool, isToBe: Bool, translation: String...) -> Verb? {
         
         guard search(word: name) == nil else { return nil}
         
-        let newVerb = Verb(name: name, translation: translation, isRegular: isRegular, isStrong: isStrong, isToBe: isToBe)
-        
-        if tense != .present, let theV1Verb = v1Verb, let unwV1Verb = search(verb: theV1Verb){
-            newVerb.present = unwV1Verb
-        }
-        
-        switch tense {
-        case .past:
-            newVerb.pastV2 = newVerb
-        case .future:
-            newVerb.future = newVerb
-        case .V3:
-            newVerb.V3 = newVerb
-        case .present:
-            newVerb.present = newVerb
-        }
+        let newVerb = Verb(name: name, tense: tense, translation: translation, isRegular: isRegular, isStrong: isStrong, isToBe: isToBe)
         
         self.words.append(newVerb)
         
         return newVerb
     }
+    
+
     
 }

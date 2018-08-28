@@ -17,14 +17,21 @@ class ViewController: UIViewController {
         
         let word = Vocabulary.context.search(word: "can")
         if let theVerb = word as? Verb {
-            print(theVerb.name, theVerb.translation, theVerb.present?.name)
+            print(theVerb)
         }else{
             print("Not found")
         }
         
         let word2 = Vocabulary.context.search(word: "will be")
         if let theVerb = word2 as? Verb {
-            print(theVerb.name, theVerb.translation, theVerb.getTense())
+            print(theVerb)
+        }else{
+            print("Not found")
+        }
+        
+        let word3 = Vocabulary.context.search(word: "are")
+        if let theVerb = word3 as? Verb {
+            print(theVerb)
         }else{
             print("Not found")
         }
