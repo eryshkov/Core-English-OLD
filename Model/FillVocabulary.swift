@@ -12,8 +12,9 @@ class FillVocabulary {
     
     let vocabulary = Vocabulary.context
     
-//    func fill () {
-//        vocabulary.addVerb(v2VerbName: <#T##String#>, isRegular: <#T##Bool#>, isStrong: <#T##Bool#>, v1Name: <#T##String?#>, translation: <#T##String...##String#>)
-//    }
+    func fill () {
+        vocabulary.addVerb(verbName: "will be", tense: .future, linkToV1Verb: nil, isRegular: false, isStrong: false, isToBe: false, translation: "буду являться")
+    }
+    
     private init () {}
 }

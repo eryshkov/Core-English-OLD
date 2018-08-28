@@ -15,6 +15,21 @@ class Verb:Word {
     var pastV2: Verb?
     var V3: Verb?
     
+    func getTense() -> Tense? {
+        switch self {
+        case self.present:
+            return .present
+        case self.future:
+            return .future
+        case self.pastV2:
+            return .past
+        case self.V3:
+            return .V3
+        default:
+            return nil
+        }
+    }
+    
     init(name: String, translation: [String], present: Verb? = nil, future: Verb? = nil, pastV2: Verb? = nil, V3: Verb? = nil, isRegular: Bool, isStrong: Bool, isToBe: Bool) {
         self.isRegular = isRegular
         self.isStrong = isStrong

@@ -34,27 +34,34 @@ class Vocabulary {
         }
     }
     
-    func addVerb(verbName name: String, isRegular: Bool, isStrong: Bool, translation: String...) -> Bool {
-        guard let searchedWord = search(word: name), let _ = searchedWord as? Verb else { return false }
-        
-        let newVerb = Verb(name: name, translation: translation, isRegular: isRegular, isStrong: isStrong, isToBe: false)
-        
-        self.words.insert(newVerb)
-        
-        return true
+    func search(verb name: String) -> Verb?  {
+        guard let verb = search(word: name), let unwVerb = verb as? Verb else { return nil }
+        return unwVerb
     }
     
-    func addVerb(v2VerbName name: String, isRegular: Bool, isStrong: Bool, v1Name verbNameLink: String? = nil, translation: String...) -> Bool {
-        guard let searchedWord = search(word: name), let _ = searchedWord as? Verb else { return false }
+    func addVerb(verbName name: String, tense: Tense, linkToV1Verb v1Verb: String? = nil, isRegular: Bool, isStrong: Bool, isToBe: Bool, translation: String...) {
         
-        let newVerb = Verb(name: name, translation: translation, isRegular: isRegular, isStrong: isStrong, isToBe: false)
+        guard search(word: name) == nil else { return }
         
-        if let v1VerbName = verbNameLink, let v1Verb = search(word: v1VerbName) as? Verb {
-            newVerb.present = v1Verb
+        let newVerb = Verb(name: name, translation: translation, isRegular: isRegular, isStrong: isStrong, isToBe: isToBe)
+        
+        if tense != .present, let theV1Verb = v1Verb, let unwV1Verb = search(verb: theV1Verb){
+            newVerb.present = unwV1Verb
+        }
+        
+        switch tense {
+        case .past:
+            newVerb.pastV2 = newVerb
+        case .future:
+            newVerb.future = newVerb
+        case .V3:
+            newVerb.V3 = newVerb
+        case .present:
+            newVerb.present = newVerb
         }
         
         self.words.insert(newVerb)
         
-        return true
     }
+    
 }
