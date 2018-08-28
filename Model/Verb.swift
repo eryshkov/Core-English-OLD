@@ -30,19 +30,19 @@ class Verb:Word {
         }
     }
     
-    func addLink(toPresent verb: Verb) {
+    func setLink(toPresent verb: Verb) {
         self.present = verb
     }
     
-    func addLink(toPastV2 verb: Verb) {
+    func setLink(toPastV2 verb: Verb) {
         self.pastV2 = verb
     }
     
-    func addLink(toFuture verb: Verb) {
+    func setLink(toFuture verb: Verb) {
         self.future = verb
     }
     
-    func addLink(toV3 verb: Verb) {
+    func setLink(toV3 verb: Verb) {
         self.V3 = verb
     }
     
