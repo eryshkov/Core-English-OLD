@@ -131,6 +131,7 @@
 				TargetAttributes = {
 					5C4C900F212B1DB2000DC4B7 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -327,6 +328,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = L2PMLV77L3;
 				INFOPLIST_FILE = "Core English/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,7 +337,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "fec117fc-2f2e-4cf2-adc5-1f59288062cd";
 				PROVISIONING_PROFILE_SPECIFIER = 8b1759d59c557b10982ce1246caf2d5a38c6a6c1;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -347,6 +349,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = L2PMLV77L3;
 				INFOPLIST_FILE = "Core English/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,7 +358,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "fec117fc-2f2e-4cf2-adc5-1f59288062cd";
 				PROVISIONING_PROFILE_SPECIFIER = 8b1759d59c557b10982ce1246caf2d5a38c6a6c1;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
