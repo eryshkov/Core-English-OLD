@@ -12,12 +12,12 @@ class Sudoku {
     var field = [Int]()
     let numOfSquares = 9
     
-    private init() {}
+    private init() {generateField()}
     
     func generateField() {
         field.removeAll()
-        for i in 0...numOfSquares-1 {
-           field.append(i+1)
+        for i in 1...numOfSquares {
+           field.append(i)
         }
         field.shuffle()
     }
