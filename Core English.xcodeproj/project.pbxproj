@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C1226192158011900D30F9A /* Noun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1226182158011900D30F9A /* Noun.swift */; };
+		5C12261B2158023000D30F9A /* Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C12261A2158023000D30F9A /* Sudoku.swift */; };
 		5C4C9014212B1DB2000DC4B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C9013212B1DB2000DC4B7 /* AppDelegate.swift */; };
 		5C4C9016212B1DB2000DC4B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C9015212B1DB2000DC4B7 /* ViewController.swift */; };
 		5C4C9019212B1DB2000DC4B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C4C9017212B1DB2000DC4B7 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C1226182158011900D30F9A /* Noun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noun.swift; sourceTree = "<group>"; };
+		5C12261A2158023000D30F9A /* Sudoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sudoku.swift; sourceTree = "<group>"; };
 		5C4C9010212B1DB2000DC4B7 /* Core English.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Core English.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C4C9013212B1DB2000DC4B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C4C9015212B1DB2000DC4B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				5CFB1D3A21308A39004AB68D /* Word.swift */,
 				5CFB1D4021309288004AB68D /* Pronoun.swift */,
 				5CFB1D42213092AD004AB68D /* Name.swift */,
+				5C1226182158011900D30F9A /* Noun.swift */,
+				5C12261A2158023000D30F9A /* Sudoku.swift */,
 				5CFB1D3E21309265004AB68D /* Verb.swift */,
 				5CFB1D3C21309229004AB68D /* Sentence.swift */,
 				5CD69FA021356B6600F5F142 /* Tense.swift */,
@@ -174,6 +180,7 @@
 			files = (
 				5CFB1D3B21308A39004AB68D /* Word.swift in Sources */,
 				5CD69FA121356B6600F5F142 /* Tense.swift in Sources */,
+				5C12261B2158023000D30F9A /* Sudoku.swift in Sources */,
 				5CFB1D4121309288004AB68D /* Pronoun.swift in Sources */,
 				5CFB1D3F21309265004AB68D /* Verb.swift in Sources */,
 				5CFB1D45213092C5004AB68D /* Vocabulary.swift in Sources */,
@@ -181,6 +188,7 @@
 				5CFB1D3D21309229004AB68D /* Sentence.swift in Sources */,
 				5CD69F9F21353D6800F5F142 /* FillVocabulary.swift in Sources */,
 				5CFB1D43213092AD004AB68D /* Name.swift in Sources */,
+				5C1226192158011900D30F9A /* Noun.swift in Sources */,
 				5C4C9014212B1DB2000DC4B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
