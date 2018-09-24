@@ -42,14 +42,17 @@ class ViewController: UIViewController {
     }
     
     func setConstraints() {
-        if UIApplication.shared.statusBarOrientation.isLandscape {
+        let height = view.bounds.height
+        let width = view.bounds.width
+        
+        if width >= height {
             verticalConstraint?.isActive = false
             horizontalConstraint?.isActive = true
-            print("Horizontal")
+//            print("Horizontal")
         } else {
             horizontalConstraint?.isActive = false
             verticalConstraint?.isActive = true
-            print("Vertical")
+//            print("Vertical")
         }
     }
 

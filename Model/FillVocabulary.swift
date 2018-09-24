@@ -12,6 +12,9 @@ class FillVocabulary {
     
     let vocabulary = Vocabulary.context
     
+    private init () {}
+    
+    //MARK: - Sudoku Verbs
     func fill () {
         
         _ = vocabulary.addVerb(verbName: "can", tense: .present, isRegular: false, isStrong: true, isToBe: false, translation: "могу")
@@ -38,5 +41,5 @@ class FillVocabulary {
         vocabulary.addVerb(verbName: "had to", tense: .past, isRegular: false, isStrong: true, isToBe: false, translation: "был должен")?.setLink(toVerbs: "must")
     }
     
-    private init () {}
+    
 }
