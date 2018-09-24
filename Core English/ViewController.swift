@@ -11,8 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var fieldView: UIView!
     
-    var verticalConstraint: NSLayoutConstraint?
-    var horizontalConstraint: NSLayoutConstraint?
+    var verticalConstraints = [NSLayoutConstraint]()
+    var horizontalConstraints = [NSLayoutConstraint]()
+    let horizontalMargins: CGFloat = 16
+    let verticalMargins: CGFloat = 20
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +36,12 @@ class ViewController: UIViewController {
     
     //MARK: - Dynamic Constraints
     func createConstraints() {
-        horizontalConstraint = NSLayoutConstraint(item: fieldView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 0.9, constant: 0)
+        verticalConstraints.append(NSLayoutConstraint(item: fieldView, attribute: .leading, relatedBy: .equal, toItem: view.safeAreaLayoutGuide, attribute: .leading, multiplier: 1, constant: horizontalMargins))
+        verticalConstraints.append(NSLayoutConstraint(item: fieldView, attribute: .trailing, relatedBy: .equal, toItem: view.safeAreaLayoutGuide, attribute: .trailing, multiplier: 1, constant: -horizontalMargins))
 //        horizontalConstraint.identifier = "forHorizontal"
         
-        verticalConstraint = NSLayoutConstraint(item: fieldView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.9, constant: 0)
+        horizontalConstraints.append(NSLayoutConstraint(item: fieldView, attribute: .top, relatedBy: .equal, toItem: view.safeAreaLayoutGuide, attribute: .top, multiplier: 1, constant: verticalMargins))
+        horizontalConstraints.append(NSLayoutConstraint(item: fieldView, attribute: .bottom, relatedBy: .equal, toItem: view.safeAreaLayoutGuide, attribute: .bottom, multiplier: 1, constant: -verticalMargins))
 //        verticalConstraint.identifier = "forVertical"
     }
     
@@ -46,12 +50,16 @@ class ViewController: UIViewController {
         let width = view.bounds.width
         
         if width >= height {
-            verticalConstraint?.isActive = false
-            horizontalConstraint?.isActive = true
+            NSLayoutConstraint.activate(horizontalConstraints)
+            for constraint in verticalConstraints {
+                constraint.isActive = false
+            }
 //            print("Horizontal")
         } else {
-            horizontalConstraint?.isActive = false
-            verticalConstraint?.isActive = true
+            NSLayoutConstraint.activate(verticalConstraints)
+            for constraint in horizontalConstraints {
+                constraint.isActive = false
+            }
 //            print("Vertical")
         }
     }
