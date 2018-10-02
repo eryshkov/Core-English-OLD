@@ -9,14 +9,16 @@
 class Word {
     var name: String
     var translation: [String]
+    var isSingular:Bool // Единственное число
     
-    init(name: String, translation: [String]) {
+    init(name: String, isSingular:Bool, translation: [String]) {
         self.name = name
         self.translation = translation
+        self.isSingular = isSingular
     }
     
-    convenience init(name: String, translation: String...) {
-        self.init(name: name, translation: translation)
+    convenience init(name: String, isSingular:Bool, translation: String...) {
+        self.init(name: name, isSingular: isSingular, translation: translation)
     }
     
 }

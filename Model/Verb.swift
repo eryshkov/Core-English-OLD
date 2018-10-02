@@ -46,29 +46,30 @@ class Verb:Word {
         }
     }
     
-    init(name: String, tense: Tense, translation: [String], present: Verb? = nil, future: Verb? = nil, pastV2: Verb? = nil, V3: Verb? = nil, isRegular: Bool, isStrong: Bool, isToBe: Bool) {
+    init(name: String, tense: Tense, isSingular: Bool, translation: [String], present: Verb? = nil, future: Verb? = nil, pastV2: Verb? = nil, V3: Verb? = nil, isRegular: Bool, isStrong: Bool, isToBe: Bool) {
         self.isRegular = isRegular
         self.isStrong = isStrong
         self.isToBe = isToBe
         self.tense = tense
-        super.init(name: name, translation: translation)
+        super.init(name: name, isSingular: isSingular, translation: translation)
     }
     
-    convenience init(v1Strong name: String, translation: String...) {
-        self.init(name: name, tense: .present, translation: translation, isRegular: false, isStrong: true, isToBe: false)
-    }
     
-    convenience init(v1Regular name: String, translation: String...) {
-        self.init(name: name, tense: .present, translation: translation, isRegular: true, isStrong: false, isToBe: false)
-    }
-    
-    convenience init(v1Irregular name: String, translation: String...) {
-        self.init(name: name, tense: .present, translation: translation, isRegular: false, isStrong: false, isToBe: false)
-    }
-    
-    convenience init(v1ToBe name: String, translation: String...) {
-        self.init(name: name, tense: .present, translation: translation, isRegular: false, isStrong: false, isToBe: true)
-    }
+//    convenience init(v1Strong name: String, translation: String...) {
+//        self.init(name: name, tense: .present, translation: translation, isRegular: false, isStrong: true, isToBe: false)
+//    }
+//
+//    convenience init(v1Regular name: String, translation: String...) {
+//        self.init(name: name, tense: .present, translation: translation, isRegular: true, isStrong: false, isToBe: false)
+//    }
+//
+//    convenience init(v1Irregular name: String, translation: String...) {
+//        self.init(name: name, tense: .present, translation: translation, isRegular: false, isStrong: false, isToBe: false)
+//    }
+//
+//    convenience init(v1ToBe name: String, translation: String...) {
+//        self.init(name: name, tense: .present, translation: translation, isRegular: false, isStrong: false, isToBe: true)
+//    }
     
 
 }

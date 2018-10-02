@@ -6,19 +6,13 @@
 //  Copyright © 2018 Evgeniy Ryshkov. All rights reserved.
 //
 
-class Pronoun:Word {//Местоимение
-    var isSingular:Bool // Единственное число
-    
-    init(name: String, translation: [String], isSingular:Bool) {
-        self.isSingular = isSingular
-        super.init(name: name, translation: translation)
-    }
+final class Pronoun:Word, NonVerbable {//Местоимение
     
     convenience init(singularName name: String, translation: String...) {
-        self.init(name: name, translation: translation, isSingular: true)
+        self.init(name: name, isSingular: true, translation: translation)
     }
     
     convenience init(NonSingularName name: String, translation: String...) {
-        self.init(name: name, translation: translation, isSingular: false)
+        self.init(name: name, isSingular: true, translation: translation)
     }
 }
