@@ -45,7 +45,9 @@ class FillVocabulary {
         _ = vocabulary.addName(name: "Serezha", isSingular: true, translation: "")
         _ = vocabulary.addName(name: "Larisa", isSingular: true, translation: "")
         _ = vocabulary.addName(name: "Lena", isSingular: true, translation: "")
-        _ = vocabulary.addName(name: "Natasha", isSingular: true, translation: "")
+        _ = vocabulary.addName(name: "David", isSingular: true, translation: "")
+        _ = vocabulary.addName(name: "Andrew", isSingular: true, translation: "")
+        _ = vocabulary.addName(name: "Sergey Lazarev", isSingular: true, translation: "")
         
         _ = vocabulary.addNoun(noun: "dog", isSingular: true, translation: "собака")
         _ = vocabulary.addNoun(noun: "cat", isSingular: true, translation: "кошка")
@@ -67,6 +69,8 @@ class FillVocabulary {
         _ = vocabulary.addPronoun(pronoun: "he", isSingular: true, translation: "он")
         _ = vocabulary.addPronoun(pronoun: "she", isSingular: true, translation: "она")
         _ = vocabulary.addPronoun(pronoun: "it", isSingular: true, translation: "это")
+        
+        
         
         ///MARK: - Diamond Verb Core
         _ = vocabulary.addVerb(verbName: "like", tense: .present, isSingular: true, isRegular: true, isStrong: false, isToBe: false, translation: "любить, нравиться")

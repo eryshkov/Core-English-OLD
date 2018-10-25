@@ -58,6 +58,10 @@ class Vocabulary {
         return addWord(wordName: name, isSingular: isSingular, translation: translation)
     }
     
+    func addAdjective(name: String, isSingular:Bool, translation: String...) -> Adjective? {
+        return addWord(wordName: name, isSingular: isSingular, translation: translation)
+    }
+    
 //MARK: - Getters
    fileprivate func getAllWords<T>() -> [T] {
         var wordArray = [T]()
@@ -96,6 +100,10 @@ class Vocabulary {
     }
     
     func getAllNames() -> [Name] {
+        return getAllWords()
+    }
+    
+    func getAllAdjectives() -> [Adjective] {
         return getAllWords()
     }
 }

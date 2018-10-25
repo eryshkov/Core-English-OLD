@@ -18,6 +18,7 @@
 		5C4C9026212B1EC3000DC4B7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5C4C9025212B1EC3000DC4B7 /* .gitignore */; };
 		5CD69F9F21353D6800F5F142 /* FillVocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD69F9E21353D6800F5F142 /* FillVocabulary.swift */; };
 		5CD69FA121356B6600F5F142 /* Tense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD69FA021356B6600F5F142 /* Tense.swift */; };
+		5CE06A1D2181E5BB009468CA /* Adjective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE06A1C2181E5BB009468CA /* Adjective.swift */; };
 		5CFB1D3B21308A39004AB68D /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB1D3A21308A39004AB68D /* Word.swift */; };
 		5CFB1D3D21309229004AB68D /* Sentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB1D3C21309229004AB68D /* Sentence.swift */; };
 		5CFB1D3F21309265004AB68D /* Verb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB1D3E21309265004AB68D /* Verb.swift */; };
@@ -40,6 +41,7 @@
 		5C4C9025212B1EC3000DC4B7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5CD69F9E21353D6800F5F142 /* FillVocabulary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillVocabulary.swift; sourceTree = "<group>"; };
 		5CD69FA021356B6600F5F142 /* Tense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tense.swift; sourceTree = "<group>"; };
+		5CE06A1C2181E5BB009468CA /* Adjective.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adjective.swift; sourceTree = "<group>"; };
 		5CFB1D3A21308A39004AB68D /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		5CFB1D3C21309229004AB68D /* Sentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentence.swift; sourceTree = "<group>"; };
 		5CFB1D3E21309265004AB68D /* Verb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verb.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				5CFB1D3A21308A39004AB68D /* Word.swift */,
 				5CFB1D4021309288004AB68D /* Pronoun.swift */,
+				5CE06A1C2181E5BB009468CA /* Adjective.swift */,
 				5CFB1D42213092AD004AB68D /* Name.swift */,
 				5C23F8462163A9180032D090 /* NonVerbable.swift */,
 				5C1226182158011900D30F9A /* Noun.swift */,
@@ -206,6 +209,7 @@
 				5C4C9016212B1DB2000DC4B7 /* ViewController.swift in Sources */,
 				5CFB1D3D21309229004AB68D /* Sentence.swift in Sources */,
 				5CD69F9F21353D6800F5F142 /* FillVocabulary.swift in Sources */,
+				5CE06A1D2181E5BB009468CA /* Adjective.swift in Sources */,
 				5C23F8472163A9180032D090 /* NonVerbable.swift in Sources */,
 				5CFB1D43213092AD004AB68D /* Name.swift in Sources */,
 				5C1226192158011900D30F9A /* Noun.swift in Sources */,
