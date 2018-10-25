@@ -11,6 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var fieldView: UIView!
     
+    @IBOutlet var labelCollection: [UILabel]!
+    
+    
     var verticalConstraints = [NSLayoutConstraint]()
     var horizontalConstraints = [NSLayoutConstraint]()
     let horizontalMargins: CGFloat = 16
@@ -30,6 +33,9 @@ class ViewController: UIViewController {
     func generateField() {
         sudoku.generateField()
         
+        for label in labelCollection {
+            label.text = String(label.tag)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
