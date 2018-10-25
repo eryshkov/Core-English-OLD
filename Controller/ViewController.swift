@@ -20,7 +20,8 @@ class ViewController: UIViewController {
     let verticalMargins: CGFloat = 20
     
     var sudoku = Sudoku.context
-    let sudokuField = Sudoku.context.field
+    let sudokuField = Sudoku.context.squares
+    let labelSquareOffset = 100
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,7 @@ class ViewController: UIViewController {
         sudoku.generateField()
         
         for label in labelCollection {
-            label.text = String(label.tag)
+            label.text = String(sudokuField[label.tag - labelSquareOffset])
         }
     }
     

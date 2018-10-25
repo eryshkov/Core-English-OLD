@@ -9,16 +9,16 @@ import Foundation
 struct Sudoku {
     static var context = Sudoku()
     
-    var field = [Int]()
+    var squares = [Int]()
     let numOfSquares = 9
     
     private init() {generateField()}
     
     mutating func generateField() {
-        field.removeAll()
+        squares.removeAll()
         for i in 1...numOfSquares {
-           field.append(i)
+           squares.append(i)
         }
-        field.shuffle()
+        squares.shuffle()
     }
 }
