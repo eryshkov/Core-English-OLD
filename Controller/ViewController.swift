@@ -16,11 +16,20 @@ class ViewController: UIViewController {
     let horizontalMargins: CGFloat = 16
     let verticalMargins: CGFloat = 20
     
+    var sudoku = Sudoku.context
+    let sudokuField = Sudoku.context.field
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
 //        FillVocabulary.context.fill()
         createConstraints()
+        generateField()
+    }
+    
+    func generateField() {
+        sudoku.generateField()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

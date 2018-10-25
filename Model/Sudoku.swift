@@ -6,7 +6,7 @@
 //  Copyright © 2018 Evgeniy Ryshkov. All rights reserved.
 //
 import Foundation
-class Sudoku {
+struct Sudoku {
     static var context = Sudoku()
     
     var field = [Int]()
@@ -14,7 +14,7 @@ class Sudoku {
     
     private init() {generateField()}
     
-    func generateField() {
+    mutating func generateField() {
         field.removeAll()
         for i in 1...numOfSquares {
            field.append(i)
