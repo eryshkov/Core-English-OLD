@@ -23,6 +23,12 @@ class ViewController: UIViewController {
     let sudokuField = Sudoku.context.squares
     let labelSquareOffset = 100
     
+    let vocabulary = Vocabulary.context
+    var verbs = [Verb]()
+    var names = [Name]()
+    var pronouns = [Pronoun]()
+    var adjectives = [Adjective]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +38,11 @@ class ViewController: UIViewController {
     
     func generateField() {
         sudoku.generateField()
+        
+        verbs = vocabulary.getAllSimplePresentVerbs()
+        names = vocabulary.getAllNames()
+        pronouns = vocabulary.getAllPronouns()
+        adjectives = vocabulary.getAllAdjectives()
         
         for label in labelCollection {
             label.text = String(sudokuField[label.tag - labelSquareOffset])
