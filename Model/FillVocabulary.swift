@@ -17,6 +17,7 @@ class FillVocabulary {
     //MARK: - Sudoku Verbs
     func fill () {
         
+        //MARK: - Verbs
         _ = vocabulary.addVerb(verbName: "can", tense: .present, isSingular: true, isRegular: nil, isStrong: true, isToBe: false, translation: "могу")
         _ = vocabulary.addVerb(verbName: "may", tense: .present, isSingular: true, isRegular: nil, isStrong: true, isToBe: false, translation: "можно")
         _ = vocabulary.addVerb(verbName: "must", tense: .present, isSingular: true, isRegular: nil, isStrong: true, isToBe: false, translation: "должен")
@@ -40,6 +41,7 @@ class FillVocabulary {
         vocabulary.addVerb(verbName: "might", tense: .past, isSingular: true, isRegular: nil, isStrong: true, isToBe: false, translation: "было можно")?.setLink(toVerbs: "may")
         vocabulary.addVerb(verbName: "had to", tense: .past, isSingular: true, isRegular: nil, isStrong: true, isToBe: false, translation: "был должен")?.setLink(toVerbs: "must")
         
+        //MARK: - Names
         _ = vocabulary.addName(name: "Ricky", isSingular: true, translation: "")
         _ = vocabulary.addName(name: "Evgeniy", isSingular: true, translation: "")
         _ = vocabulary.addName(name: "Serezha", isSingular: true, translation: "")
@@ -49,6 +51,7 @@ class FillVocabulary {
         _ = vocabulary.addName(name: "Andrew", isSingular: true, translation: "")
         _ = vocabulary.addName(name: "Sergey Lazarev", isSingular: true, translation: "")
         
+        //MARK: - Nouns
         _ = vocabulary.addNoun(noun: "dog", isSingular: true, translation: "собака")
         _ = vocabulary.addNoun(noun: "cat", isSingular: true, translation: "кошка")
         _ = vocabulary.addNoun(noun: "sun", isSingular: true, translation: "солнце")
@@ -61,7 +64,7 @@ class FillVocabulary {
         _ = vocabulary.addNoun(noun: "mother", isSingular: true, translation: "мама")
         _ = vocabulary.addNoun(noun: "father", isSingular: true, translation: "папа")
         
-        
+        //MARK: - Pronouns
         _ = vocabulary.addPronoun(pronoun: "I", isSingular: true, translation: "я")
         _ = vocabulary.addPronoun(pronoun: "you", isSingular: true, translation: "вы")
         _ = vocabulary.addPronoun(pronoun: "we", isSingular: false, translation: "мы")
@@ -70,9 +73,51 @@ class FillVocabulary {
         _ = vocabulary.addPronoun(pronoun: "she", isSingular: true, translation: "она")
         _ = vocabulary.addPronoun(pronoun: "it", isSingular: true, translation: "это")
         
+        //MARK: - Adjectives
+        _ = vocabulary.addAdjective(name: "first", isSingular: true, translation: "первый")
+        _ = vocabulary.addAdjective(name: "good", isSingular: true, translation: "хороший")
+        _ = vocabulary.addAdjective(name: "big", isSingular: true, translation: "большой")
+        _ = vocabulary.addAdjective(name: "hard", isSingular: true, translation: "жесткий")
+        _ = vocabulary.addAdjective(name: "honest", isSingular: true, translation: "честный")
+        _ = vocabulary.addAdjective(name: "noisy", isSingular: true, translation: "шумный")
+        _ = vocabulary.addAdjective(name: "rich", isSingular: true, translation: "богатый")
+        _ = vocabulary.addAdjective(name: "lazy", isSingular: true, translation: "ленивый")
+        _ = vocabulary.addAdjective(name: "similar", isSingular: true, translation: "похожий")
+        _ = vocabulary.addAdjective(name: "soft", isSingular: true, translation: "мягкий")
+        _ = vocabulary.addAdjective(name: "angry", isSingular: true, translation: "сердитый")
+        _ = vocabulary.addAdjective(name: "merry", isSingular: true, translation: "веселый")
+        _ = vocabulary.addAdjective(name: "smart", isSingular: true, translation: "разумный")
+        _ = vocabulary.addAdjective(name: "long", isSingular: true, translation: "длинный")
+        _ = vocabulary.addAdjective(name: "young", isSingular: true, translation: "молодой")
+        _ = vocabulary.addAdjective(name: "fresh", isSingular: true, translation: "свежий")
+        _ = vocabulary.addAdjective(name: "high", isSingular: true, translation: "высокий")
+        _ = vocabulary.addAdjective(name: "clean", isSingular: true, translation: "чистый")
+        _ = vocabulary.addAdjective(name: "clear", isSingular: true, translation: "понятный")
+        _ = vocabulary.addAdjective(name: "simple", isSingular: true, translation: "простой")
+        
+        _ = vocabulary.addAdjective(name: "last", isSingular: true, translation: "последний")
+        _ = vocabulary.addAdjective(name: "bad", isSingular: true, translation: "плохой")
+        _ = vocabulary.addAdjective(name: "small", isSingular: true, translation: "маленький")
+        _ = vocabulary.addAdjective(name: "easy", isSingular: true, translation: "легкий")
+        _ = vocabulary.addAdjective(name: "dishonest", isSingular: true, translation: "нечестный")
+        _ = vocabulary.addAdjective(name: "quiet", isSingular: true, translation: "тихий")
+        _ = vocabulary.addAdjective(name: "poor", isSingular: true, translation: "бедный")
+        _ = vocabulary.addAdjective(name: "hardworking", isSingular: true, translation: "работящий")
+        _ = vocabulary.addAdjective(name: "different", isSingular: true, translation: "другой")
+        _ = vocabulary.addAdjective(name: "firm", isSingular: true, translation: "твердый")
+        _ = vocabulary.addAdjective(name: "nice", isSingular: true, translation: "хороший")
+        _ = vocabulary.addAdjective(name: "sad", isSingular: true, translation: "грустный")
+        _ = vocabulary.addAdjective(name: "stupid", isSingular: true, translation: "глупый")
+        _ = vocabulary.addAdjective(name: "short", isSingular: true, translation: "короткий")
+        _ = vocabulary.addAdjective(name: "old", isSingular: true, translation: "старый")
+        _ = vocabulary.addAdjective(name: "stale", isSingular: true, translation: "несвежий")
+        _ = vocabulary.addAdjective(name: "low", isSingular: true, translation: "низкий")
+        _ = vocabulary.addAdjective(name: "dirty", isSingular: true, translation: "грязный")
+        _ = vocabulary.addAdjective(name: "unclear", isSingular: true, translation: "непонятный")
+        _ = vocabulary.addAdjective(name: "complicated", isSingular: true, translation: "сложный")
         
         
-        ///MARK: - Diamond Verb Core
+        //MARK: - Diamond Verb Core
         _ = vocabulary.addVerb(verbName: "like", tense: .present, isSingular: true, isRegular: true, isStrong: false, isToBe: false, translation: "любить, нравиться")
         _ = vocabulary.addVerb(verbName: "want", tense: .present, isSingular: true, isRegular: true, isStrong: false, isToBe: false, translation: "хотеть")
         _ = vocabulary.addVerb(verbName: "need", tense: .present, isSingular: true, isRegular: true, isStrong: false, isToBe: false, translation: "нуждатьсяб нужно")
