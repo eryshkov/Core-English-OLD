@@ -17,7 +17,7 @@ class FillVocabulary {
     //MARK: - Sudoku Verbs
     func fill () {
         
-        _ = vocabulary.addVerb(verbName: "can", tense: .present, isSingular: true, isRegular: false, isStrong: true, isToBe: false, translation: "могу")
+        _ = vocabulary.addVerb(verbName: "can", tense: .present, isSingular: true, isRegular: nil, isStrong: true, isToBe: false, translation: "могу")
         _ = vocabulary.addVerb(verbName: "may", tense: .present, isSingular: true, isRegular: false, isStrong: true, isToBe: false, translation: "можно")
         _ = vocabulary.addVerb(verbName: "must", tense: .present, isSingular: true, isRegular: false, isStrong: true, isToBe: false, translation: "должен")
         _ = vocabulary.addVerb(verbName: "will", tense: .future, isSingular: true, isRegular: false, isStrong: true, isToBe: false, translation: "буду")

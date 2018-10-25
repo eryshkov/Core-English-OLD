@@ -25,7 +25,7 @@ class Vocabulary {
         return unwVerb
     }
     
-    func addVerb(verbName name: String, tense: Tense, isSingular:Bool, isRegular: Bool, isStrong: Bool, isToBe: Bool, translation: String...) -> Verb? {
+    func addVerb(verbName name: String, tense: Tense, isSingular:Bool, isRegular: Bool?, isStrong: Bool, isToBe: Bool, translation: String...) -> Verb? {
         
         guard search(word: name) == nil else { return nil}
         

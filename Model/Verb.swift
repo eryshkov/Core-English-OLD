@@ -7,7 +7,7 @@
 //
 
 class Verb:Word {
-    var isRegular: Bool //Правильный глагол
+    var isRegular: Bool? //Правильный глагол
     var isStrong: Bool //Сильный глагол
     var isToBe: Bool // to be verb
     var tense: Tense
@@ -46,7 +46,7 @@ class Verb:Word {
         }
     }
     
-    init(name: String, tense: Tense, isSingular: Bool, translation: [String], present: Verb? = nil, future: Verb? = nil, pastV2: Verb? = nil, V3: Verb? = nil, isRegular: Bool, isStrong: Bool, isToBe: Bool) {
+    init(name: String, tense: Tense, isSingular: Bool, translation: [String], present: Verb? = nil, future: Verb? = nil, pastV2: Verb? = nil, V3: Verb? = nil, isRegular: Bool? = nil, isStrong: Bool, isToBe: Bool) {
         self.isRegular = isRegular
         self.isStrong = isStrong
         self.isToBe = isToBe
