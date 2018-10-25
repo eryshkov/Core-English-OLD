@@ -12,7 +12,7 @@ class FillVocabulary {
     
     let vocabulary = Vocabulary.context
     
-    private init () {}
+    private init () {fill()}
     
     //MARK: - Sudoku Verbs
     func fill () {
@@ -39,6 +39,29 @@ class FillVocabulary {
         vocabulary.addVerb(verbName: "could", tense: .past, isSingular: true, isRegular: nil, isStrong: true, isToBe: false, translation: "мог")?.setLink(toVerbs: "can")
         vocabulary.addVerb(verbName: "might", tense: .past, isSingular: true, isRegular: nil, isStrong: true, isToBe: false, translation: "было можно")?.setLink(toVerbs: "may")
         vocabulary.addVerb(verbName: "had to", tense: .past, isSingular: true, isRegular: nil, isStrong: true, isToBe: false, translation: "был должен")?.setLink(toVerbs: "must")
+        
+        _ = vocabulary.addName(name: "Ricky", isSingular: true, translation: "")
+        _ = vocabulary.addName(name: "Evgeniy", isSingular: true, translation: "")
+        _ = vocabulary.addName(name: "Serezha", isSingular: true, translation: "")
+        _ = vocabulary.addName(name: "Larisa", isSingular: true, translation: "")
+        
+        _ = vocabulary.addNoun(noun: "dog", isSingular: true, translation: "собака")
+        _ = vocabulary.addNoun(noun: "cat", isSingular: true, translation: "кошка")
+        _ = vocabulary.addNoun(noun: "sun", isSingular: true, translation: "солнце")
+        _ = vocabulary.addNoun(noun: "meal", isSingular: true, translation: "еда")
+        _ = vocabulary.addNoun(noun: "moon", isSingular: true, translation: "луна")
+        _ = vocabulary.addNoun(noun: "earth", isSingular: true, translation: "земля")
+        _ = vocabulary.addNoun(noun: "turtle", isSingular: true, translation: "черепаха")
+        _ = vocabulary.addNoun(noun: "rabbit", isSingular: true, translation: "кролик")
+        _ = vocabulary.addNoun(noun: "window", isSingular: true, translation: "окно")
+        
+        _ = vocabulary.addPronoun(pronoun: "I", isSingular: true, translation: "я")
+        _ = vocabulary.addPronoun(pronoun: "you", isSingular: true, translation: "вы")
+        _ = vocabulary.addPronoun(pronoun: "we", isSingular: false, translation: "мы")
+        _ = vocabulary.addPronoun(pronoun: "they", isSingular: false, translation: "они")
+        _ = vocabulary.addPronoun(pronoun: "he", isSingular: true, translation: "он")
+        _ = vocabulary.addPronoun(pronoun: "she", isSingular: true, translation: "она")
+        _ = vocabulary.addPronoun(pronoun: "it", isSingular: true, translation: "это")
     }
     
     
