@@ -70,6 +70,19 @@ class Vocabulary {
         return wordArray
     }
     
+    func getAllPresentVerbs() -> [Verb] {
+        let allVerbs = getAllVerbs()
+        var presentVerbs = [Verb]()
+        
+        for verb in allVerbs {
+            if verb.tense == .present {
+                presentVerbs.append(verb)
+            }
+        }
+        
+        return presentVerbs
+    }
+    
     func getAllVerbs() -> [Verb] {
         return getAllWords()
     }
