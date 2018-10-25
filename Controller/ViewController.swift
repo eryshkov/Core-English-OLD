@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     let verticalMargins: CGFloat = 20
     
     var sudoku = Sudoku.context
-    let sudokuField = Sudoku.context.squares
+    var sudokuField = Sudoku.context.squares
     let labelSquareOffset = 100
     
     let vocabulary = Vocabulary.context
@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        FillVocabulary.context.fill()
         createConstraints()
         generateField()
     }
@@ -39,13 +40,28 @@ class ViewController: UIViewController {
     func generateField() {
         sudoku.generateField()
         
-        verbs = vocabulary.getAllSimplePresentVerbs()
-        names = vocabulary.getAllNames()
-        pronouns = vocabulary.getAllPronouns()
-        adjectives = vocabulary.getAllAdjectives()
-        
+        verbs = vocabulary.getAllSimplePresentVerbs().shuffled()
+        names = vocabulary.getAllNames().shuffled()
+        pronouns = vocabulary.getAllPronouns().shuffled()
+        adjectives = vocabulary.getAllAdjectives().shuffled()
+        var namesAndPronouns = vocabulary.getAllNamesNounsPronouns().shuffled()
+
         for label in labelCollection {
-            label.text = String(sudokuField[label.tag - labelSquareOffset])
+//            label.text = String(verbs[label.tag - labelSquareOffset].name)
+            let currentSquare = label.tag - labelSquareOffset
+            print(currentSquare)
+            switch currentSquare {
+            case 0:
+                    var text = (namesAndPronouns.first!).name
+                    namesAndPronouns.removeFirst()
+                    text = "\(text)\n\((verbs.first!).name)"
+                    verbs.removeFirst()
+                    text = "\(text)\n\((verbs.first!).name)"
+                    verbs.removeFirst()
+                    label.text = text
+            default:
+                continue
+            }
         }
     }
     

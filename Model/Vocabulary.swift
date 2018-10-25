@@ -74,6 +74,23 @@ class Vocabulary {
         return wordArray
     }
     
+    func getAllNamesNounsPronouns() -> [Word] {
+        var wordArray = [Word]()
+        for word in self.words {
+            if let newWord = word as? Name {
+                wordArray.append(newWord)
+            }
+            if let newWord = word as? Noun {
+                wordArray.append(newWord)
+            }
+            if let newWord = word as? Pronoun {
+                wordArray.append(newWord)
+            }
+        }
+        
+        return wordArray
+    }
+    
     func getAllSimplePresentVerbs() -> [Verb] {
         let allVerbs = getAllVerbs()
         var presentVerbs = [Verb]()

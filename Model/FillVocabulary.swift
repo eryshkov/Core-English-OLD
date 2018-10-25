@@ -12,7 +12,7 @@ class FillVocabulary {
     
     let vocabulary = Vocabulary.context
     
-    private init () {fill()}
+    private init () {}
     
     //MARK: - Sudoku Verbs
     func fill () {
