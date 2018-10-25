@@ -24,7 +24,7 @@ class Word {
 }
 
 //MARK: - Word:Hashable
-extension Word:Hashable {
+extension Word:Hashable, Equatable {
     var hashValue: Int {
         return self.name.hashValue
     }
