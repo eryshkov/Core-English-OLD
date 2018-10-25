@@ -70,12 +70,12 @@ class Vocabulary {
         return wordArray
     }
     
-    func getAllPresentVerbs() -> [Verb] {
+    func getAllSimplePresentVerbs() -> [Verb] {
         let allVerbs = getAllVerbs()
         var presentVerbs = [Verb]()
         
         for verb in allVerbs {
-            if verb.tense == .present {
+            if verb.tense == .present && verb.isRegular != nil {
                 presentVerbs.append(verb)
             }
         }

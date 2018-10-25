@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        FillVocabulary.context.fill()
+        FillVocabulary.context.fill()
         createConstraints()
         generateField()
     }
