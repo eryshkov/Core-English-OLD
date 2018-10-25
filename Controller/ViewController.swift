@@ -38,8 +38,6 @@ class ViewController: UIViewController {
     }
     
     func generateField() {
-        sudoku.generateField()
-        
         verbs = vocabulary.getAllSimplePresentVerbs().shuffled()
         names = vocabulary.getAllNames().shuffled()
         pronouns = vocabulary.getAllPronouns().shuffled()
@@ -47,9 +45,8 @@ class ViewController: UIViewController {
         var namesAndPronouns = vocabulary.getAllNamesNounsPronouns().shuffled()
 
         for label in labelCollection {
-//            label.text = String(verbs[label.tag - labelSquareOffset].name)
             let currentSquare = label.tag - labelSquareOffset
-            print(currentSquare)
+
             switch currentSquare {
             case 0:
                     var text = (namesAndPronouns.first!).name
