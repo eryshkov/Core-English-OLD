@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     var horizontalConstraints = [NSLayoutConstraint]()
     let horizontalMargins: CGFloat = 16
     let verticalMargins: CGFloat = 20
+    var fontSizeAtCell: CGFloat = 20
     
     var sudoku = Sudoku.context
     var sudokuField = Sudoku.context.squares
@@ -28,6 +29,7 @@ class ViewController: UIViewController {
     var names = [Name]()
     var pronouns = [Pronoun]()
     var adjectives = [Adjective]()
+    var namesAndPronouns = [Word]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,10 +44,12 @@ class ViewController: UIViewController {
         names = vocabulary.getAllNames().shuffled()
         pronouns = vocabulary.getAllPronouns().shuffled()
         adjectives = vocabulary.getAllAdjectives().shuffled()
-        var namesAndPronouns = vocabulary.getAllNamesNounsPronouns().shuffled()
+        namesAndPronouns = vocabulary.getAllNamesNounsPronouns().shuffled()
 
         for label in labelCollection {
             let currentSquare = label.tag - labelSquareOffset
+            
+            label.font = label.font.withSize(fontSizeAtCell)
 
             switch currentSquare {
             case 0:
@@ -56,6 +60,7 @@ class ViewController: UIViewController {
                     text = "\(text)\n\((verbs.first!).name)"
                     verbs.removeFirst()
                     label.text = text
+                    continue
             default:
                 continue
             }
