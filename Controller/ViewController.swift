@@ -29,7 +29,20 @@ class ViewController: UIViewController {
     var names = [Name]()
     var pronouns = [Pronoun]()
     var adjectives = [Adjective]()
-    var namesAndPronouns = [Word]()
+    var namesAndPronouns = [Word]() {
+        willSet {
+            if newValue.count < namesAndPronouns.count {
+                print("item was removed from namesAndPronouns ")
+            }
+        }
+        
+        didSet {
+            if namesAndPronouns.isEmpty {
+                namesAndPronouns = vocabulary.getAllNamesNounsPronouns().shuffled()
+                print("Items was refilled at namesAndPronouns")
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +63,7 @@ class ViewController: UIViewController {
             let currentSquare = label.tag - labelSquareOffset
             
             label.font = label.font.withSize(fontSizeAtCell)
+            label.isHidden = true
 
             switch currentSquare {
             case 0:
@@ -60,6 +74,7 @@ class ViewController: UIViewController {
                     text = "\(text)\n\((verbs.first!).name)"
                     verbs.removeFirst()
                     label.text = text
+                    label.isHidden = false
                     continue
             default:
                 continue
